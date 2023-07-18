@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="s.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Side Navbar</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+	<nav>
+		<input type="checkbox" name="open" id="open" checked>
+		
+		<div class="menu">
+			<div class="logo">
+				<a href="#">
+					<img src="https://cdn-icons-png.flaticon.com/512/6352/6352923.png" alt="">
+				</a>
+			</div>
+			<ul>
+				<li>
+					<a href="#">
+						<span><i class="fas fa-home"></i></span>
+						Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span><i class="fas fa-address-card"></i></span>
+						About
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span><i class="fas fa-cog"></i></span>
+						Settings
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span><i class="fas fa-address-book"></i></span>
+						Contact
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span><i class="fas fa-comments-alt-dollar"></i></span>
+						Feedback
+					</a>
+				</li>
+				<li style="position: relative; bottom: -42vh;">
+					<a href="#">
+						<span><i class="fas fa-comments-alt-dollar"></i></span>
+						Logout
+					</a>
+				</li>
+			</ul>
+			
+		</div>
+	</nav>
+	<header>
+		<div>
+			<label for="open" class="open">
+				<i class="fas fa-bars"  onclick="Toggle()"></i>
+			</label>
+		</div>
+		<div>
+			<div class="wrap">
+				<div class="search">
+				   <input type="text" class="searchTerm" placeholder="What are you looking for?">
+				   <button type="submit" class="searchButton">
+					 <i class="fa fa-search"></i>
+				  </button>
+				</div>
+			 </div>
+		</div>
+		
+	</header>
+	<main>
+		<div class="container">
+			<h2>main</h2>
+		</div>
+	</main>
+</body>
+
+<script>
+	// Toggle();
+
+	function Toggle()
+	{
+		if($("#open").is(":checked"))
+		{
+			$("main").css("margin-left","20px");
+		}
+		else{
+			
+			$("main").css("margin-left","270px");
+		}
+	}
+</script>
+
+</html>
